@@ -19,13 +19,19 @@ const rule = require("../../../lib/rules/eslint-rule-one"),
 const ruleTester = new RuleTester();
 ruleTester.run("eslint-rule-one", rule, {
   valid: [
-    // give me some code that won't trigger a warning
+    {
+      code: "console.xxx('failed')",
+    },
   ],
 
   invalid: [
     {
-      code: "console.log('failed')",
-      errors: [{ message: "Fill me in.", type: "Me too" }],
+      code: "console.log('foo')",
+      errors: [{ message: "Avoid using console.log", type: "CallExpression" }],
+    },
+    {
+      code: "console.info('bar')",
+      errors: [{ message: "Avoid using console.info", type: "CallExpression" }],
     },
   ],
 });
