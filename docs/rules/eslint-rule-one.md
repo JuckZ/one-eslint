@@ -1,4 +1,8 @@
-# all in one (`eslint-rule-one`)
+# All in one (`one/eslint-rule-one`)
+
+🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+
+<!-- end auto-generated rule header -->
 
 Please describe the origin of the rule here.
 
