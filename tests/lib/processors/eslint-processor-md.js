@@ -12,7 +12,7 @@ const cli = new ESLint({
 });
 
 
-describe('Your Custom Processor', () => {
+describe('Eslint-plugin-one Markdown Processor', () => {
   it('should process and lint code correctly', async () => {
     const filePath = 'tests/TEST.md';
     const code = '# Hello\n# World';
