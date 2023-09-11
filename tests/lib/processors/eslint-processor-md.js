@@ -4,33 +4,21 @@
  */
 "use strict";
 const { ESLint } = require('eslint');
+const assert = require('assert');
 
 const cli = new ESLint({
-  extensions: ['your-custom-extension'],
-  // 添加你的 Processor 配置
-  // plugins
+  overrideConfig: {plugins: ['eslint-plugin-one']},
   rulePaths: ['lib/rules/']
 });
 
 
 describe('Your Custom Processor', () => {
-  it('should process and lint code correctly', () => {
+  it('should process and lint code correctly', async () => {
     const filePath = 'tests/TEST.md';
-    const code = '# README';
-    const codeReport = cli.lintText(code);
-    const fileReport = cli.lintFiles([filePath]);
-    codeReport.then(results=> {
-      console.log('1----' + results.length);
-    }).catch(error => {
-      console.error(error);
-    });
-
-    fileReport.then(results=> {
-      console.log('2----' + results.length);
-    }).catch(error => {
-      console.error(error);
-    });
-    // assert.strictEqual(report.errorCount, 0);
-    // assert.strictEqual(report.results[0].messages.length, 1);
+    const code = '# Hello\n# World';
+    const codeReport = await cli.lintText(code);
+    const fileReport = await cli.lintFiles([filePath]);
+    assert.strictEqual(codeReport[0].errorCount, 0);
+    assert.strictEqual(fileReport[0].errorCount, 0);
   });
 });

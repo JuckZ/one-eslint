@@ -7,14 +7,15 @@
     "eslintplugin",
     "eslint-plugin"
   ],
+  "license": "MIT",
   "author": "juck",
-  "main": "./lib/index.js",
   "exports": "./lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "lint": "npm-run-all \"lint:*\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint .",
-    "test": "mocha tests --recursive",
+    "test": "npm link && mocha tests --recursive",
     "update:eslint-docs": "eslint-doc-generator"
   },
   "dependencies": {
@@ -28,11 +29,10 @@
     "mocha": "^10.0.0",
     "npm-run-all": "^4.1.5"
   },
-  "engines": {
-    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
-  },
   "peerDependencies": {
     "eslint": ">=7"
   },
-  "license": "ISC"
+  "engines": {
+    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+  }
 }
