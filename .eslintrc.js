@@ -2,6 +2,9 @@
 
 module.exports = {
   root: true,
+  "parserOptions": {
+    "ecmaVersion": 'latest',
+  },
   extends: [
     "eslint:recommended",
     "plugin:eslint-plugin/recommended",
