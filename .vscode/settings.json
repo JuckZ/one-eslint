@@ -3,7 +3,12 @@
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    "source.organizeImports": false
+    "source.organizeImports": false,
+    "source.fixAll": false,
+    "source.fixAll.markdownlint": false,
+    "source.fixAll.stylelint": true,
+    "source.fixAll.tslint": true,
+    "source.sortPackageJson": true, // sort package.json on save
   },
 
   // The following is optional.

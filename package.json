@@ -16,7 +16,7 @@
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint .",
     "test": "npm link && mocha tests --recursive",
-    "t": "mocha tests/lib/rules/prefer-default-parameters.js",
+    "t": "npm link && mocha tests/lib/processors/eslint-processor-md.js",
     "update:eslint-docs": "eslint-doc-generator"
   },
   "dependencies": {
@@ -27,10 +27,13 @@
     "@babel/core": "^7.22.17",
     "@babel/eslint-parser": "^7.22.15",
     "@typescript-eslint/parser": "^6.6.0",
-    "eslint": "^8.44.0",
+    "eslint": "^8.49.0",
     "eslint-doc-generator": "^1.4.3",
     "eslint-plugin-eslint-plugin": "^5.1.0",
+    "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-node": "^11.1.0",
+    "marked": "^9.0.0",
+    "mdast-util-from-markdown": "^2.0.0",
     "mocha": "^10.0.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.1",
