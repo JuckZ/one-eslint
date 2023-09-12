@@ -1,0 +1,31 @@
+{
+  "name": "@juckz/eslint-config-ts",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "eslint-config"
+  ],
+  "license": "MIT",
+  "author": "juck",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "clean": "rimraf node_modules -rf",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@juckz/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint-plugin-jest": "^27.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  }
+}

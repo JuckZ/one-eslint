@@ -1,9 +1,3 @@
-/**
- * @fileoverview all in one
- * @author juck
- */
-"use strict";
-
 const outdent = require("outdent");
 const Eslintrc = require("../../../.eslintrc");
 const rule = require("../../../lib/rules/no-default-parameters"),

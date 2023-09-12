@@ -1,20 +1,5 @@
-/**
- * @fileoverview all in one
- * @author juck
- */
-"use strict";
-
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
-
 const rule = require("../../../lib/rules/eslint-rule-one"),
   RuleTester = require("eslint").RuleTester;
-
-
-//------------------------------------------------------------------------------
-// Tests
-//------------------------------------------------------------------------------
 
 const ruleTester = new RuleTester();
 ruleTester.run("eslint-rule-one", rule, {

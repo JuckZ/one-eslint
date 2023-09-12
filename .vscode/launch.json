@@ -8,7 +8,8 @@
       "type": "node",
       "request": "launch",
       "name": "Run npm test t",
-      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/packages/eslint-plugin-one",
+      "runtimeExecutable": "pnpm",
       "runtimeArgs": [
         "run-script",
         "t"

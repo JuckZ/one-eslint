@@ -1,9 +1,3 @@
-/**
- * @fileoverview all in one
- * @author juck
- */
-"use strict";
-
 const marked = require('marked');
 
 /** @type {import('eslint').Linter.Processor} */

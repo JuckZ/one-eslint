@@ -1,4 +1,4 @@
-# eslint-plugin-one
+# one-eslint
 
 all in one
 
@@ -38,19 +38,3 @@ Then configure the rules you want to use under the rules section.
     }
 }
 ```
-
-## Rules
-
-<!-- begin auto-generated rules list -->
-
-🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).\
-💡 Manually fixable by [editor suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions).
-
-| Name                                                                 | Description                                  | 🔧 | 💡 |
-| :------------------------------------------------------------------- | :------------------------------------------- | :- | :- |
-| [eslint-rule-one](docs/rules/eslint-rule-one.md)                     | all in one                                   | 🔧 |    |
-| [prefer-default-parameters](docs/rules/prefer-default-parameters.md) | Prefer default parameters over reassignment. | 🔧 | 💡 |
-
-<!-- end auto-generated rules list -->
-
-

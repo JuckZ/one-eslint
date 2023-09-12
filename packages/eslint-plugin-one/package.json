@@ -1,0 +1,52 @@
+{
+  "name": "eslint-plugin-one",
+  "version": "0.0.0",
+  "description": "all in one",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "license": "MIT",
+  "author": "juck",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf node_modules -rf",
+    "docs": "eslint-doc-generator",
+    "lint": "npm-run-all \"lint:*\"",
+    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
+    "lint:js": "eslint .",
+    "t": "mocha tests/lib/processors/eslint-processor-md.js",
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^6.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.17",
+    "@babel/eslint-parser": "^7.22.15",
+    "@types/node": "^20.5.3",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.47.0",
+    "eslint-doc-generator": "^1.4.3",
+    "eslint-plugin-eslint-plugin": "^5.1.0",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-markdownlint": "^0.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "marked": "^9.0.0",
+    "mdast-util-from-markdown": "^2.0.0",
+    "mocha": "^10.0.0",
+    "yaml": "^2.3.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=7"
+  },
+  "engines": {
+    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+  }
+}

@@ -1,48 +1,31 @@
 {
-  "name": "eslint-plugin-one",
+  "name": "one-eslint",
   "version": "0.0.0",
+  "private": true,
   "description": "all in one",
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ],
   "license": "MIT",
   "author": "juck",
   "exports": "./lib/index.js",
   "main": "./lib/index.js",
   "scripts": {
-    "lint": "npm-run-all \"lint:*\"",
-    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
-    "lint:js": "eslint .",
-    "test": "npm link && mocha tests --recursive",
-    "t": "npm link && mocha tests/lib/processors/eslint-processor-md.js",
-    "update:eslint-docs": "eslint-doc-generator"
+    "b:js": "echo building js",
+    "b:css": "echo building css",
+    "build": "npm-run-all b:*",
+    "parallel": "run-p b:js b:css",
+    "serial": "run-s b:js b:css",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test",
+    "clean": "pnpm -r clean && rimraf node_modules -rf"
   },
   "dependencies": {
     "outdent": "^0.8.0",
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.17",
-    "@babel/eslint-parser": "^7.22.15",
-    "@typescript-eslint/parser": "^6.6.0",
-    "eslint": "^8.49.0",
-    "eslint-doc-generator": "^1.4.3",
-    "eslint-plugin-eslint-plugin": "^5.1.0",
-    "eslint-plugin-markdown": "^3.0.1",
-    "eslint-plugin-node": "^11.1.0",
-    "marked": "^9.0.0",
-    "mdast-util-from-markdown": "^2.0.0",
-    "mocha": "^10.0.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-one": "link:./packages/eslint-plugin-one",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^5.0.1",
-    "yaml": "^2.3.1"
+    "rimraf": "^5.0.1"
   },
-  "peerDependencies": {
-    "eslint": ">=7"
-  },
-  "engines": {
-    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
-  }
+  "packageManager": "pnpm@8.6.2"
 }

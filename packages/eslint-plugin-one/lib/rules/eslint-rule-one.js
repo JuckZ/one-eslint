@@ -1,11 +1,3 @@
-/**
- * @fileoverview all in one
- * @author juck
- */
-"use strict";
-// Rule Definition
-//------------------------------------------------------------------------------
-
 /** @type {import('eslint').Rule.RuleModule} */
 module.exports = {
   meta: {
