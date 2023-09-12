@@ -9,11 +9,26 @@
   ],
   "license": "MIT",
   "author": "juck",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "node": "./lib/index.js",
+      "default": "./lib/index.js"
+    },
+    "./parser": {
+      "import": "./parser.js",
+      "require": "./parser.js",
+      "node": "./parser.js",
+      "default": "./parser.js"
+    }
+  },
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "files": [
-    "dist"
+    "dist",
+    "lib/**/*.js",
+    "parser.js"
   ],
   "scripts": {
     "clean": "rimraf node_modules -rf",
@@ -38,6 +53,7 @@
     "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-markdownlint": "^0.5.0",
     "eslint-plugin-node": "^11.1.0",
+    "markdownlint": "^0.31.0",
     "marked": "^9.0.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mocha": "^10.0.0",

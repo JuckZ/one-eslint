@@ -3,7 +3,12 @@ const Eslintrc = require("../../../.eslintrc");
 const rule = require("../../../lib/rules/no-default-parameters"),
   RuleTester = require("eslint").RuleTester;
 
-const ruleTester = new RuleTester(Eslintrc);
+const ruleTester = new RuleTester({
+	...Eslintrc,
+	"parserOptions": {
+    "ecmaVersion": 'latest',
+  },
+});
 ruleTester.run("no-default-parameters", rule, {
   valid: [
     'function abc(a){a=123}'

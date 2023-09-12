@@ -154,6 +154,9 @@ importers:
       eslint-plugin-node:
         specifier: ^11.1.0
         version: 11.1.0(eslint@8.47.0)
+      markdownlint:
+        specifier: ^0.31.0
+        version: 0.31.0
       marked:
         specifier: ^9.0.0
         version: 9.0.0
@@ -2453,12 +2456,25 @@ packages:
     engines: {node: '>=16'}
     dev: true
 
+  /markdownlint-micromark@0.1.7:
+    resolution: {integrity: sha512-BbRPTC72fl5vlSKv37v/xIENSRDYL/7X/XoFzZ740FGEbs9vZerLrIkFRY0rv7slQKxDczToYuMmqQFN61fi4Q==}
+    engines: {node: '>=16'}
+    dev: true
+
   /markdownlint@0.29.0:
     resolution: {integrity: sha512-ASAzqpODstu/Qsk0xW5BPgWnK/qjpBQ4e7IpsSvvFXcfYIjanLTdwFRJK1SIEEh0fGSMKXcJf/qhaZYHyME0wA==}
     engines: {node: '>=16'}
     dependencies:
       markdown-it: 13.0.1
       markdownlint-micromark: 0.1.5
+    dev: true
+
+  /markdownlint@0.31.0:
+    resolution: {integrity: sha512-e+jZGRGZrz1s0T4wiPDFtyQafq7sKgdbf2sdL46gRT8zLEvDDihQmGeSCV6VXp9BsfkuZ0dPTAg9hf4j6NFgjg==}
+    engines: {node: '>=16'}
+    dependencies:
+      markdown-it: 13.0.1
+      markdownlint-micromark: 0.1.7
     dev: true
 
   /marked@9.0.0:
