@@ -10,5 +10,5 @@ module.exports = {
     },
     schema: [],
   },
-  create: ruleChecker(Rule.MD001),
+  create: ruleChecker(Rule.MINE001),
 };

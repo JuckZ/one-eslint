@@ -1,6 +1,6 @@
 const {name, version} = require('../package.json');
 const requireIndex = require("requireindex");
-const mdProcessor = require("./processors/eslint-processor-md");
+const mineProcessor = require("./processors/eslint-processor-mine");
 
 /** @type {import('eslint').ESLint.Plugin} */
 module.exports = {
@@ -12,24 +12,19 @@ module.exports = {
     ...requireIndex(__dirname + "/rules"),
   },
   processors: {
-    ".md": mdProcessor,
-    'markdown': mdProcessor
+    ".mine": mineProcessor,
+    'mine': mineProcessor
   },
   configs: {
-    // recommended: {
-    //   env: {
-    //     es6: true,
-    //     browser: true
-    //   },
-    //   plugins: ['one'],
-    //   processors: {
-    //     ".md": mdProcessor,
-    //     'markdown': mdProcessor
-    //   },
-    //   rules: {
-    //     ...requireIndex(__dirname + "/configs/recommended/rules"),
-    //   }
-    // },
-    all: {}
+    recommended: {
+      plugins: ['one'],
+      rules: {
+        'one/mine001': 2
+      },
+      env: {
+        es6: true,
+        browser: true
+      }
+    },
   }
 }

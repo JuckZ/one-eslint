@@ -7,19 +7,20 @@ const cli = new ESLint({
   overrideConfig: {
     overrides: [
       {
-        files: ['**/*.md'],
-        parser: "eslint-plugin-markdownlint/parser",
-        extends: ["plugin:markdownlint/recommended"],
+        files: ['**/*.mine'],
+        // processor: 'one/mine',
+        parser: "eslint-plugin-one/mineParser",
+        extends: ["plugin:one/recommended"],
+        // extends: ["@juckz",],
         rules: {
-          "markdownlint/md001": "error",
-          "markdownlint/md003": "warn",
-          "markdownlint/md025": ["error", {
-            "level": 1
-          }]
+          "one/mine001": "error",
+          // "one/mine025": ["error", {
+          //   "level": 1
+          // }]
         }
       },
       {
-        files: ["**/*.md/*.js"],
+        files: ["**/*.mine/*.js"],
         parserOptions: {
           ecmaFeatures: {
             impliedStrict: true
@@ -37,13 +38,13 @@ const cli = new ESLint({
 describe('Eslint-plugin-one Markdown Processor', () => {
 
   it('should process and lint code correctly', async () => {
-    const filePath = 'fixtures/markdown/TEST.md';
+    const filePath = 'fixtures/mine/TEST.mine';
     const fileReport = await cli.lintFiles([filePath]);
     assert.strictEqual(fileReport[0].errorCount, 10);
   });
 
   it('should process and lint code correctly', async () => {
-    const filePath = 'fixtures/markdown/TEST2.md';
+    const filePath = 'fixtures/mine/TEST2.mine';
     const fileReport = await cli.lintFiles([filePath]);
     assert.strictEqual(fileReport[0].errorCount, 2);
   });
@@ -51,7 +52,7 @@ describe('Eslint-plugin-one Markdown Processor', () => {
   it('should process and lint code correctly', async () => {
     const code = '# Hello\n## World\n## Juck';
     const codeReport = await cli.lintText(code, {
-      filePath: 'a.md'
+      filePath: 'a.mine'
     });
     assert.strictEqual(codeReport[0].errorCount, 5);
   });
@@ -61,7 +62,7 @@ describe('Eslint-plugin-one Markdown Processor', () => {
     # Hello
     ## World`;
     const codeReport = await cli.lintText(code, {
-      filePath: 'b.md'
+      filePath: 'b.mine'
     });
     assert.strictEqual(codeReport[0].errorCount, 3);
   });

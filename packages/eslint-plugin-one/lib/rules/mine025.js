@@ -1,3 +1,11 @@
+/**
+ * @fileoverview Rule MD025
+ * @see https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md025
+ * @author Paweł BB Drozd
+ */
+
+"use strict";
+
 const ruleChecker = require("../ruleChecker");
 const Rule = require("./rule");
 
@@ -23,5 +31,5 @@ module.exports = {
       },
     ],
   },
-  create: ruleChecker(Rule.MD025),
+  create: ruleChecker(Rule.MINE025),
 };

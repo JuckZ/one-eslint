@@ -1,3 +1,10 @@
+/**
+ * @fileOverview Message and report formatters.
+ * @author Paweł BB Drozd
+ */
+
+"use strict";
+
 module.exports.formatMessage = ({ ruleDescription, errorDetail, errorContext }) => {
   let message = "";
   message += ruleDescription;

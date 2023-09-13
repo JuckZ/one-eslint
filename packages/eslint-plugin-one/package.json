@@ -16,19 +16,18 @@
       "node": "./lib/index.js",
       "default": "./lib/index.js"
     },
-    "./parser": {
-      "import": "./parser.js",
-      "require": "./parser.js",
-      "node": "./parser.js",
-      "default": "./parser.js"
+    "./mineParser": {
+      "import": "./lib/parser/mineParser.js",
+      "require": "./lib/parser/mineParser.js",
+      "node": "./lib/parser/mineParser.js",
+      "default": "./lib/parser/mineParser.js"
     }
   },
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "files": [
     "dist",
-    "lib/**/*.js",
-    "parser.js"
+    "lib/**/*.js"
   ],
   "scripts": {
     "clean": "rimraf node_modules -rf",
@@ -36,28 +35,23 @@
     "lint": "npm-run-all \"lint:*\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint .",
-    "t": "mocha tests/lib/processors/eslint-processor-md.js",
+    "t": "mocha tests/lib/processors/eslint-processor-mine.js",
     "test": "mocha tests --recursive"
   },
   "dependencies": {
     "@typescript-eslint/utils": "^6.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.17",
-    "@babel/eslint-parser": "^7.22.15",
     "@types/node": "^20.5.3",
-    "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.47.0",
     "eslint-doc-generator": "^1.4.3",
     "eslint-plugin-eslint-plugin": "^5.1.0",
-    "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-markdownlint": "^0.5.0",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-yml": "^1.9.0",
     "markdownlint": "^0.31.0",
     "marked": "^9.0.0",
-    "mdast-util-from-markdown": "^2.0.0",
-    "mocha": "^10.0.0",
-    "yaml": "^2.3.1"
+    "mocha": "^10.0.0"
   },
   "peerDependencies": {
     "eslint": ">=7"
