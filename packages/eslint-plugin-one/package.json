@@ -37,7 +37,7 @@
     "lint:js": "eslint .",
     "prepublishOnly": "npm unpublish eslint-plugin-one@0.0.0 --force",
     "prepublish": "npm unpublish eslint-plugin-one@0.0.0 --force",
-    "t": "mocha tests/lib/processors/eslint-processor-md.js",
+    "t": "mocha tests/lib/rules/prefer-comment-method.js",
     "test": "mocha tests --recursive"
   },
   "dependencies": {

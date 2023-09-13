@@ -19,7 +19,15 @@ module.exports = {
     recommended: {
       plugins: ['one'],
       rules: {
-        'one/md001': 2
+        // 'one/md001': 'error',
+        'one/prefer-comment-method': [
+          'error',
+          {
+            objName: 'test',
+            propNames: ['testCall'],
+            commentName: '$test'
+          }
+        ]
       },
       env: {
         es6: true,
