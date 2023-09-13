@@ -6,8 +6,8 @@
 "use strict";
 
 const Rule = Object.freeze({
-  MINE001: "mine001",
-  MINE025: 'mine025'
+  MD001: "md001",
+  MD025: 'md025'
 });
 
 module.exports = Rule;

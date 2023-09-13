@@ -11,5 +11,5 @@ module.exports = {
     schema: [],
     fixable: "whitespace",
   },
-  create: ruleChecker(Rule.MINE001),
+  create: ruleChecker(Rule.MD001),
 };

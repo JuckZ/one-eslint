@@ -16,11 +16,11 @@
       "node": "./lib/index.js",
       "default": "./lib/index.js"
     },
-    "./mineParser": {
-      "import": "./lib/parser/mineParser.js",
-      "require": "./lib/parser/mineParser.js",
-      "node": "./lib/parser/mineParser.js",
-      "default": "./lib/parser/mineParser.js"
+    "./mdParser": {
+      "import": "./lib/parser/mdParser.js",
+      "require": "./lib/parser/mdParser.js",
+      "node": "./lib/parser/mdParser.js",
+      "default": "./lib/parser/mdParser.js"
     }
   },
   "main": "./lib/index.js",
@@ -37,7 +37,7 @@
     "lint:js": "eslint .",
     "prepublishOnly": "npm unpublish eslint-plugin-one@0.0.0 --force",
     "prepublish": "npm unpublish eslint-plugin-one@0.0.0 --force",
-    "t": "mocha tests/lib/processors/eslint-processor-mine.js",
+    "t": "mocha tests/lib/processors/eslint-processor-md.js",
     "test": "mocha tests --recursive"
   },
   "dependencies": {

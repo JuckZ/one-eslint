@@ -32,5 +32,5 @@ module.exports = {
       },
     ],
   },
-  create: ruleChecker(Rule.MINE025),
+  create: ruleChecker(Rule.MD025),
 };

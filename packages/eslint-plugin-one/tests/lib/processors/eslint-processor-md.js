@@ -8,12 +8,13 @@ const cli = new ESLint({
     overrides: [
       {
         files: ['**/*.md'],
-        parser: "eslint-plugin-markdownlint/parser",
-        extends: ["plugin:markdownlint/recommended"],
+        // processor: 'one/md',
+        parser: "eslint-plugin-one/mdParser",
+        extends: ["plugin:one/recommended"],
+        // extends: ["@juckz",],
         rules: {
-          "markdownlint/md001": "error",
-          "markdownlint/md003": "warn",
-          "markdownlint/md025": ["error", {
+          "one/md001": "error",
+          "one/md025": ["error", {
             "level": 1
           }]
         }
@@ -37,15 +38,15 @@ const cli = new ESLint({
 describe('Eslint-plugin-one Markdown Processor', () => {
 
   it('should process and lint code correctly', async () => {
-    const filePath = 'fixtures/markdown/TEST.md';
+    const filePath = 'fixtures/md/TEST.md';
     const fileReport = await cli.lintFiles([filePath]);
-    assert.strictEqual(fileReport[0].errorCount, 10);
+    assert.strictEqual(fileReport[0].errorCount, 18);
   });
 
   it('should process and lint code correctly', async () => {
-    const filePath = 'fixtures/markdown/TEST2.md';
+    const filePath = 'fixtures/md/TEST2.md';
     const fileReport = await cli.lintFiles([filePath]);
-    assert.strictEqual(fileReport[0].errorCount, 2);
+    assert.strictEqual(fileReport[0].errorCount, 4);
   });
 
   it('should process and lint code correctly', async () => {
@@ -53,7 +54,7 @@ describe('Eslint-plugin-one Markdown Processor', () => {
     const codeReport = await cli.lintText(code, {
       filePath: 'a.md'
     });
-    assert.strictEqual(codeReport[0].errorCount, 5);
+    assert.strictEqual(codeReport[0].errorCount, 10);
   });
 
   it('should process and lint code correctly', async () => {
@@ -63,6 +64,6 @@ describe('Eslint-plugin-one Markdown Processor', () => {
     const codeReport = await cli.lintText(code, {
       filePath: 'b.md'
     });
-    assert.strictEqual(codeReport[0].errorCount, 3);
+    assert.strictEqual(codeReport[0].errorCount, 6);
   });
 });

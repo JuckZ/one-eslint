@@ -3,7 +3,6 @@ exports.parseForESLint = function (code, options) {
   const linesCount = lines.length;
   const lastLineLength = lines[linesCount - 1].length;
 
-  console.log('-=-=-=-=-');
   return {
     ast: {
       type: "Program",

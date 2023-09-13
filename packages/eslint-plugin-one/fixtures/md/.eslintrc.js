@@ -4,12 +4,13 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.md'],
-      parser: "eslint-plugin-markdownlint/parser",
-      extends: ["plugin:markdownlint/recommended"],
+      // processor: 'one/md',
+      parser: "eslint-plugin-one/mdParser",
+      extends: ["plugin:one/recommended"],
+      // extends: ["@juckz",],
       rules: {
-        "markdownlint/md001": "error",
-        "markdownlint/md003": "warn",
-        "markdownlint/md025": ["error", {
+        "one/md001": "error",
+        "one/md025": ["error", {
           "level": 1
         }]
       }
