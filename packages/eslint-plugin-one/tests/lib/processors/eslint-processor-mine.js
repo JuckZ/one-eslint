@@ -14,9 +14,9 @@ const cli = new ESLint({
         // extends: ["@juckz",],
         rules: {
           "one/mine001": "error",
-          // "one/mine025": ["error", {
-          //   "level": 1
-          // }]
+          "one/mine025": ["error", {
+            "level": 1
+          }]
         }
       },
       {

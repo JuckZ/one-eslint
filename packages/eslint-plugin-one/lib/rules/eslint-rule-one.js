@@ -5,7 +5,7 @@ module.exports = {
     docs: {
       description: "all in one",
       recommended: false,
-      url: '', // URL to the documentation page for this rule
+      url: '',
     },
     fixable: 'code', // Or `code` or `whitespace`
     schema: [

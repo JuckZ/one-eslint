@@ -1,6 +1,6 @@
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-  // root: true,
+  root: true,
   extends: ["plugin:yml/standard"],
   parser: "@babel/eslint-parser",
   overrides: [

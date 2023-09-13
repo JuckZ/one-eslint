@@ -17,10 +17,6 @@
     "test": "pnpm -r run test",
     "clean": "pnpm -r clean && rimraf node_modules -rf"
   },
-  "dependencies": {
-    "outdent": "^0.8.0",
-    "requireindex": "^1.2.0"
-  },
   "devDependencies": {
     "eslint": "^8.47.0",
     "eslint-plugin-one": "link:./packages/eslint-plugin-one",

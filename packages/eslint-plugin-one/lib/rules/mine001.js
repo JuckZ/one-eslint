@@ -9,6 +9,7 @@ module.exports = {
       url: "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md001",
     },
     schema: [],
+    fixable: "whitespace",
   },
   create: ruleChecker(Rule.MINE001),
 };

@@ -8,6 +8,7 @@ module.exports = {
   },
   // takes text of the file and filename
   preprocess: function (text, filename) {
+    debugger
     // here, you can strip out any non-JS content
     // and split into multiple strings to lint
     let h1Count = 0;

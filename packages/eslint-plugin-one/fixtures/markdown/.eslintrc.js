@@ -1,6 +1,6 @@
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-  // root: false,
+  root: true,
   overrides: [
     {
       files: ['**/*.md'],

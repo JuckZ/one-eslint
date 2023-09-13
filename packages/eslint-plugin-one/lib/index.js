@@ -11,10 +11,10 @@ module.exports = {
   rules: {
     ...requireIndex(__dirname + "/rules"),
   },
-  processors: {
-    ".mine": mineProcessor,
-    'mine': mineProcessor
-  },
+  // processors: {
+  //   ".mine": mineProcessor,
+  //   'mine': mineProcessor
+  // },
   configs: {
     recommended: {
       plugins: ['one'],
