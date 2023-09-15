@@ -18,6 +18,8 @@ module.exports = {
   configs: {
     recommended: {
       plugins: ['one'],
+      globals: {},
+      settings: {},
       rules: {
         // 'one/md001': 'error',
         'one/prefer-comment-method': [
@@ -30,6 +32,7 @@ module.exports = {
         ]
       },
       env: {
+        es6: true,
         es6: true,
         browser: true
       }
