@@ -2,7 +2,6 @@
 module.exports = {
   root: true,
   extends: ["plugin:yml/standard"],
-  parser: "@babel/eslint-parser",
   overrides: [
     {
       files: ["**/*.yaml", "**/*.yml"],

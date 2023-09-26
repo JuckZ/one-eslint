@@ -41,6 +41,8 @@
     "test": "mocha tests --recursive"
   },
   "dependencies": {
+    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-local-rules": "^2.0.0",
     "markdownlint": "^0.31.0",
     "marked": "^9.0.0",
     "requireindex": "^1.2.0"

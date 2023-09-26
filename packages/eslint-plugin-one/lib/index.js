@@ -17,11 +17,14 @@ module.exports = {
   // },
   configs: {
     recommended: {
-      plugins: ['one'],
+      plugins: ['one', 'jsdoc', 'local-rules'],
       globals: {},
       settings: {},
+      extends: ["plugin:jsdoc/recommended-error"],
+      // extends: ["plugin:jsdoc/recommended-typescript-error"],
       rules: {
         // 'one/md001': 'error',
+        'local-rules/no-default-parameters': 2,
         'one/prefer-comment-method': [
           'error',
           {
